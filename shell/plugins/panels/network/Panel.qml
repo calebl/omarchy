@@ -1151,6 +1151,7 @@ Panel {
 
   BarIconButton {
     id: button
+    accessibleName: "Network"
     anchors.fill: parent
     bar: root.bar
     text: root.icon
