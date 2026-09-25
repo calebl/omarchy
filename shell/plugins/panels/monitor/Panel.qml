@@ -475,6 +475,7 @@ Panel {
 
   BarIconButton {
     id: button
+    accessibleName: "Display"
     anchors.fill: parent
     bar: root.bar
     text: Quickshell.screens.length > 1 ? "󰍺" : "󰍹"
@@ -491,6 +492,7 @@ Panel {
 
   KeyboardPanel {
     id: panel
+    accessibleName: "Display"
     anchorItem: button
     owner: root
     bar: root.bar
@@ -638,6 +640,7 @@ Panel {
 
               PanelSlider {
                 id: brightnessSlider
+                accessibleName: "Brightness"
                 bar: root.bar
                 anchors.fill: parent
                 anchors.leftMargin: Style.space(6)
@@ -713,6 +716,7 @@ Panel {
 
               PanelSlider {
                 id: textSizeSlider
+                accessibleName: "Text size"
                 bar: root.bar
                 anchors.fill: parent
                 anchors.leftMargin: Style.space(6)
