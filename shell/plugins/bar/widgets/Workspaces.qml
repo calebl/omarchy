@@ -168,7 +168,7 @@ BarWidget {
         readonly property bool focused: Hyprland.focusedWorkspace !== null && Hyprland.focusedWorkspace.id === modelData
 
         bar: root.bar
-        accessibleName: "Workspace " + modelData
+        accessibleName: I18n.t("accessibility.workspace").arg(I18n.formatNumber(modelData))
         Accessible.selectable: true
         Accessible.selected: focused
         text: focused ? root.modeGlyph(root.focusedMode) : (modelData === 10 ? "0" : String(modelData))
