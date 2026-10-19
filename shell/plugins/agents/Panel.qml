@@ -2620,6 +2620,7 @@ Panel {
         id: addNameField
         width: parent.width
         placeholderText: Commons.I18n.t("agents.placeholderWork")
+        accessibleName: Commons.I18n.t("agents.accountName")
         foreground: root.foreground
         font.family: root.fontFamily
         font.pixelSize: Style.font.body
@@ -2761,6 +2762,7 @@ Panel {
             width: parent.width
             placeholderText: root.addKeyEntry ? Commons.I18n.t("agents.placeholderApiKey") : Commons.I18n.t("agents.placeholderCode")
             password: true
+            accessibleName: Commons.I18n.t("agents.placeholderCode")
             foreground: root.foreground
             font.family: root.fontFamily
             font.pixelSize: Style.font.body
@@ -3016,6 +3018,7 @@ Panel {
       TextField {
         id: nameField
         visible: section.editingName
+        accessibleName: Commons.I18n.t("agents.accountName")
         anchors.left: sectionName.right
         anchors.leftMargin: Style.space(8)
         anchors.right: sectionActions.left

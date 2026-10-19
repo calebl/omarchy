@@ -2096,6 +2096,7 @@ Panel {
         anchors.top: parent.top
         anchors.rightMargin: Style.space(6)
         placeholderText: Commons.I18n.t("network.identity")
+        accessibleName: Commons.I18n.t("network.identity")
         font.family: Style.font.family
         font.pixelSize: Style.font.body
         foreground: root.bar.foreground
@@ -2123,6 +2124,7 @@ Panel {
         password: true
         revealed: passwordPanel.revealed
         placeholderText: Commons.I18n.t("network.passphrase")
+        accessibleName: Commons.I18n.t("network.passphrase")
         font.family: Style.font.family
         font.pixelSize: Style.font.body
         foreground: root.bar.foreground
