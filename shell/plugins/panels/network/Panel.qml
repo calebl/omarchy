@@ -1716,6 +1716,7 @@ Panel {
     selectable: true
     active: root.bandCurrent === band
     selected: root.bandEffective === band
+    Accessible.selected: selected
     hasCursor: root.cursorActive && root.focusSection === "band"
       && !root.bandAutoFocused && root.bandIndex === slot
 
