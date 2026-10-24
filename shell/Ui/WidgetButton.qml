@@ -34,9 +34,18 @@ Item {
   // Set by the bar while its own press handler, laid over the widget for
   // dragging, holds this button down; mouseArea never sees that press.
   property bool held: false
+  // What assistive technology announces. Bar labels are often glyphs, so the
+  // tooltip wins; BarIconButton never falls back to its glyph text.
+  property string accessibleName: tooltipText !== "" ? tooltipText : text
 
   signal pressed(int button)
   signal wheelMoved(int delta)
+
+  Accessible.role: pressable ? Accessible.Button : Accessible.StaticText
+  Accessible.name: accessibleName
+  Accessible.description: tooltipText !== accessibleName ? tooltipText : ""
+  Accessible.ignored: concealed || !hasVisualContent
+  Accessible.onPressAction: if (root.enabled && root.interactive && root.pressable) root.triggerPress(Qt.LeftButton)
 
   function triggerPress(button) {
     if (root.bar) root.bar.hideTooltip(root)
